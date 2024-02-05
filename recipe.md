@@ -49,9 +49,9 @@ Given several new tasks, it will create a list of tasks.
 """
 def test_task_checker_add_new_tasks():
     my_tasks = Task_tracker()
-    my_task.add('go running')
-    my_task.add('go shopping')
-    actual = my_task.tasks_list
+    my_tasks.add('go running')
+    my_tasks.add('go shopping')
+    actual = my_tasks.tasks_list
     expected = ['go running', 'go shopping']
     assert actual == expected
 
@@ -60,10 +60,10 @@ Given several new tasks, it will create a list of tasks.
 """
 def test_task_checker_task_completed():
     my_tasks = Task_tracker()
-    my_task.add('go running')
-    my_task.add('go shopping')
-    my_task.complete('go running')
-    actual = mytask.tasks_list
+    my_tasks.add('go running')
+    my_tasks.add('go shopping')
+    my_tasks.complete('go running')
+    actual = my_tasks.tasks_list
     expected = ['go shopping']
     assert actual == expected
 
